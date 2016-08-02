@@ -17,10 +17,6 @@ namespace HelloGeoff.iOS
         [Outlet]
         UIKit.UIButton Button { get; set; }
 
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIImageView GeoffImage { get; set; }
-
         [Action ("Button_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void Button_TouchUpInside (UIKit.UIButton sender);
@@ -30,11 +26,6 @@ namespace HelloGeoff.iOS
             if (Button != null) {
                 Button.Dispose ();
                 Button = null;
-            }
-
-            if (GeoffImage != null) {
-                GeoffImage.Dispose ();
-                GeoffImage = null;
             }
         }
     }

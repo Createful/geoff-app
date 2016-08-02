@@ -97,9 +97,14 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\geoff.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\geoff.imageset\geoff.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Assets.xcassets\geoff.imageset\" />
+    <Folder Include="Resources\Images\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -117,9 +122,12 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="AlternativeViewController.cs" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\geoff.png" />
+    <BundleResource Include="Resources\Images\geoff.png" />
+    <BundleResource Include="Resources\Images\left_point.png" />
+    <BundleResource Include="Resources\Images\right_point.png" />
   </ItemGroup>
   <Import Project="..\HelloGeoff\HelloGeoff.projitems" Label="Shared" Condition="Exists('..\HelloGeoff\HelloGeoff.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

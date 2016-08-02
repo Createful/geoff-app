@@ -1,11 +1,9 @@
 ﻿using System;
-using HelloGeoff;
 
 namespace HelloGeoff
 {
 	public class GeoffPresenter
 	{
-
 		Viewable view;
 		Random random;
 		int result;
@@ -17,9 +15,6 @@ namespace HelloGeoff
 			Console.WriteLine("Presenter created");
 
 			random = new Random();
-
-			result = random.Next(0, 1);
-
 		}
 
 		internal void AskGeoff()
@@ -29,7 +24,6 @@ namespace HelloGeoff
 			result = random.Next(0, 2);
 
 			Console.WriteLine("Random Number is {0}", result);
-			//view.ChangeImage();
 
 			view.DoMagic();
 

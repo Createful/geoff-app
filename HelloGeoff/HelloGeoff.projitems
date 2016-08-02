@@ -16,8 +16,10 @@
     <Folder Include="$(MSBuildThisFileDirectory)Images\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)Images\geoff.png" />
     <None Include="$(MSBuildThisFileDirectory)Images\left_point.png" />
     <None Include="$(MSBuildThisFileDirectory)Images\right_point.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\geoff.png" />
   </ItemGroup>
 </Project>
