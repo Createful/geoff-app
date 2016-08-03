@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace HelloGeoff
 {
@@ -35,6 +36,14 @@ namespace HelloGeoff
 					view.SelectYes();
 					break;
 			}
+
+			WaitAndReset();
+		}
+
+		async void WaitAndReset()
+		{
+			await Task.Delay(10*1000);
+			view.Reset();
 		}
 	}
 }
