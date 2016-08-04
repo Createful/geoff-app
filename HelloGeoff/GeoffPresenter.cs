@@ -29,15 +29,7 @@ namespace HelloGeoff
 			view.DoMagic();
 		}
 
-		async void WaitAndReset()
-		{
-			await Task.Delay(30 * 1000);
-			view.Reset();
-		}
-
-		internal void OnMagicFinished() { 
-			switch (result)
-			{
+			switch (result) {
 				case 0:
 					view.SelectNo();
 					break;
