@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Threading.Tasks;
 
 namespace HelloGeoff
 {
 	public class GeoffPresenter
 	{
-		GeoffViewable view;
+		Viewable view;
 		Random random;
 		int result;
 
@@ -47,6 +47,12 @@ namespace HelloGeoff
 			}
 
 			WaitAndReset();
+		}
+
+		async void WaitAndReset()
+		{
+			await Task.Delay(10*1000);
+			view.Reset();
 		}
 	}
 }
