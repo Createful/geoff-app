@@ -60,7 +60,7 @@
     <AndroidResource Include="Resources\mipmap-xhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
-    <AndroidResource Include="Resources\drawable\geoff.png" />
+    <AndroidResource Include="Resources\drawable\resting.png" />
     <AndroidResource Include="Resources\drawable\right_point.png" />
     <AndroidResource Include="Resources\drawable\left_point.png" />
   </ItemGroup>

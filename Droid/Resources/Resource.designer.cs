@@ -45,10 +45,10 @@ namespace HelloGeoff.Droid
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int geoff = 2130837504;
+			public const int left_point = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int left_point = 2130837505;
+			public const int resting = 2130837505;
 			
 			// aapt resource value: 0x7f020002
 			public const int right_point = 2130837506;

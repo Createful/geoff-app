@@ -10,7 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)GeoffPresenter.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Viewable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GeoffViewable.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Images\" />
@@ -20,6 +20,6 @@
     <None Include="$(MSBuildThisFileDirectory)Images\right_point.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\geoff.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\resting.png" />
   </ItemGroup>
 </Project>

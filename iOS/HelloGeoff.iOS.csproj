@@ -118,14 +118,10 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="ViewController.cs" />
-    <Compile Include="ViewController.designer.cs">
-      <DependentUpon>ViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AlternativeViewController.cs" />
+    <Compile Include="GeoffViewController.cs" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Images\geoff.png" />
+    <BundleResource Include="Resources\Images\resting.png" />
     <BundleResource Include="Resources\Images\left_point.png" />
     <BundleResource Include="Resources\Images\right_point.png" />
   </ItemGroup>

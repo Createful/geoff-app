@@ -1,14 +1,15 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace HelloGeoff
 {
 	public class GeoffPresenter
 	{
-		Viewable view;
+		GeoffViewable view;
 		Random random;
 		int result;
 
-		public GeoffPresenter(Viewable view)
+		public GeoffPresenter(GeoffViewable view)
 		{
 			this.view = view;
 
@@ -26,8 +27,17 @@ namespace HelloGeoff
 			Console.WriteLine("Random Number is {0}", result);
 
 			view.DoMagic();
+		}
 
-			switch (result) {
+		async void WaitAndReset()
+		{
+			await Task.Delay(30 * 1000);
+			view.Reset();
+		}
+
+		internal void OnMagicFinished() { 
+			switch (result)
+			{
 				case 0:
 					view.SelectNo();
 					break;
@@ -35,6 +45,8 @@ namespace HelloGeoff
 					view.SelectYes();
 					break;
 			}
+
+			WaitAndReset();
 		}
 	}
 }

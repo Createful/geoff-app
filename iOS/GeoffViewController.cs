@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace HelloGeoff.iOS
 {
-	public class AlternativeViewController : UIViewController, Viewable
+	public class GeoffViewController : UIViewController, GeoffViewable
 	{
 
 		GeoffPresenter presenter;
@@ -21,7 +21,7 @@ namespace HelloGeoff.iOS
 		UIColor labelTextHighlight = UIColor.FromRGB(0, 0, 0);
 		UIColor labelTextNeutralColor = UIColor.FromRGB(230, 230, 230);
 
-		UIImage geoffImage = UIImage.FromBundle("Images/geoff");
+		UIImage geoffImage = UIImage.FromBundle("Images/resting");
 		UIImage pointLeft = UIImage.FromBundle("Images/left_point");
 		UIImage pointRight = UIImage.FromBundle("Images/right_point");
 

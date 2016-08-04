@@ -1,6 +1,8 @@
-﻿namespace HelloGeoff
+﻿using System;
+
+namespace HelloGeoff
 {
-	public interface Viewable
+	public interface GeoffViewable
 	{
 		void DoMagic();
 		void SelectYes();

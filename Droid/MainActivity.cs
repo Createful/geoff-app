@@ -8,8 +8,9 @@ using HelloGeoff;
 namespace HelloGeoff.Droid
 {
 	[Activity(Label = "Hello Geoff", MainLauncher = true, Icon = "@mipmap/icon")]
-	public class MainActivity : Activity, Viewable
+	public class MainActivity : Activity, GeoffViewable
 	{
+		static int fullColorRange = 256;
 
 		ImageView imageView;
 
@@ -29,12 +30,13 @@ namespace HelloGeoff.Droid
 
 		Color neutralTextColor = new Color(230,230,230);
 
-
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
 
-			// Set our view from the "main" layout resource
+			Window.RequestFeature(Android.Views.WindowFeatures.NoTitle);
+
+
 			SetContentView(Resource.Layout.Main);
 
 			presenter = new GeoffPresenter(this);
@@ -50,7 +52,6 @@ namespace HelloGeoff.Droid
 
 			button.Click += delegate 
 			{ 
-				
 				presenter.AskGeoff();
 			};
 
@@ -59,14 +60,16 @@ namespace HelloGeoff.Droid
 
 		public void DoMagic()
 		{
-			//Animated Geoff doing magic here
+			//TODO Animated Geoff doing magic here
 
 			for (int i = 0; i < 10; i++)
 			{
 				imageView.PostDelayed(ChangeGeoffColor, i*100);
 			}
 
-			imageView.PostDelayed(ResetGeoffColor, 1100);
+
+			imageView.PostDelayed(presenter.OnMagicFinished, 1200);
+
 		}
 
 		public void SelectYes()
@@ -75,7 +78,8 @@ namespace HelloGeoff.Droid
 		}
 
 		public void ShowYes() 
-		{ 
+		{
+			ResetGeoffColor();
 			yes.SetTextColor(highlightedTextColor);
 			yes.SetBackgroundColor(highlightedColor);
 			imageView.SetImageResource(Resource.Drawable.left_point);
@@ -84,11 +88,11 @@ namespace HelloGeoff.Droid
 		public void SelectNo()
 		{
 			no.PostDelayed(ShowNo, 1200);
-
 		}
 
 		public void ShowNo() 
-		{ 
+		{
+			ResetGeoffColor();
 			no.SetTextColor(highlightedTextColor);
 			no.SetBackgroundColor(highlightedColor);
 			imageView.SetImageResource(Resource.Drawable.right_point);
@@ -96,7 +100,7 @@ namespace HelloGeoff.Droid
 
 		public void Reset() 
 		{
-			imageView.SetImageResource(Resource.Drawable.geoff);
+			imageView.SetImageResource(Resource.Drawable.resting);
 			imageView.SetBackgroundColor(neutralColor);
 			yes.SetBackgroundColor(neutralColor);
 			no.SetBackgroundColor(neutralColor);
@@ -106,7 +110,12 @@ namespace HelloGeoff.Droid
 
 		public void ChangeGeoffColor() 
 		{ 
-			imageView.SetBackgroundColor(new Android.Graphics.Color(random.Next(256), random.Next(256), random.Next(256)));
+			imageView.SetBackgroundColor(new Android.Graphics.Color(
+				random.Next(fullColorRange), 
+				random.Next(fullColorRange), 
+				random.Next(fullColorRange)
+			));
+
 		}
 
 		public void ResetGeoffColor()

@@ -22,7 +22,7 @@ namespace HelloGeoff.iOS
 			// If not required for your application you can safely delete this method
 
 			Window = new UIWindow(UIScreen.MainScreen.Bounds);
-			Window.RootViewController = new AlternativeViewController();
+			Window.RootViewController = new GeoffViewController();
 			Window.MakeKeyAndVisible();
 
 
